@@ -16,6 +16,8 @@ module ForemanHooks
 
     initializer 'foreman_hooks.register_plugin', :before => :finisher_hook do |app|
       Foreman::Plugin.register :foreman_hooks do
+      logger.debug "foreman_hooks_debug"
+      logger.info "foreman_hooks_info"
       end
     end
   end
